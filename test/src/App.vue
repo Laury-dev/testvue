@@ -2,7 +2,7 @@
   <div id="app">
     <NavBarre class="nav" />
       <div class="div" key="div">
-        <HelloWorld />
+        <PartOne />
       </div>
       <div id="div1" key="div1"></div>
       <div id="div2" key="div2">
@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import PartOne from "./components/PartOne";
 import NavBarre from "./components/NavBarre";
 import Cards from "./components/Cards";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    PartOne,
     NavBarre,
     Cards
   }
