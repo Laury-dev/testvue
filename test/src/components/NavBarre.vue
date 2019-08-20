@@ -77,4 +77,10 @@ export default {
   background-color: #2c3e50;
   color: #fff;
 }
+
+@media (max-width: 750px){
+   .navDiv{
+       background-color: crimson;
+   } 
+}
 </style>

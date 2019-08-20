@@ -60,7 +60,7 @@ html {
 #div3 {
   padding-top: 5em;
   width: 100%;
-  height: 60em;
+  height: 52em;
   background-color: aquamarine;
 }
 .nav {
