@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <NavBarre class="nav" />
-    <div class="div">
-      <HelloWorld />
-    </div>
-    <div id="div1"></div>
-    <div id="div2">
-      <Cards />
-    </div>
-    <div id="div3"></div>
+      <div class="div" key="div">
+        <HelloWorld />
+      </div>
+      <div id="div1" key="div1"></div>
+      <div id="div2" key="div2">
+        <Cards />
+      </div>
+      <div id="div3" key="div3"></div>
   </div>
 </template>
 
