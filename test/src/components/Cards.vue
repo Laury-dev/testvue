@@ -18,42 +18,42 @@
 <script>
 const cards = [
   {
-    front: "Titre front 1 ",
+    front: 'Titre front 1',
     back: {
-      titre: "Titre back 1",
-      parag: "Parag back 1"
+      titre: 'Titre back 1',
+      parag: 'Parag back 1'
     },
     move: false
   },
   {
-    front: "Titre front 2",
+    front: 'Titre front 2',
     back: {
-      titre: "Titre back 2",
-      parag: "Parag back 2"
+      titre: 'Titre back 2',
+      parag: 'Parag back 2'
     },
     move: false
   },
   {
-    front: "Titre front 3",
+    front: 'Titre front 3',
     back: {
-      titre: "Titre back 3",
-      parag: "Parag back 3"
+      titre: 'Titre back 3',
+      parag: 'Parag back 3'
     },
     move: false
   }
-];
+]
 export default {
-  data() {
+  data () {
     return {
       cards: cards
-    };
+    }
   },
   methods: {
     moveCard: card => {
-      card.move = !card.move;
+      card.move = !card.move
     }
   }
-};
+}
 </script>
 
 <style>

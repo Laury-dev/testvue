@@ -30,7 +30,7 @@ export default {
   watch: {
     slides (slides) {
       if (this.index >= this.slidesCount) {
-        this.index = this.slidesCount - 1 
+        this.index = this.slidesCount - 1
       }
     }
   },
@@ -69,15 +69,15 @@ export default {
   position: absolute;
   top: 50%;
   left: 1em;
-  background: #000;
-  width: 60px;
-  height: 60px;
+  background: url("../../assets/fleche.png");
+  width: 50px;
+  height: 50px;
   border: none;
 }
 .carousel__nav.carousel__next{
   right: 1em;
   left: auto;
-  background:  #000;
+  background:  url("../../assets/fleche.png");
 }
 .pagination{
   position: absolute;

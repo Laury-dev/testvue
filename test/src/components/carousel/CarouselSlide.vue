@@ -8,10 +8,11 @@
 
 <script>
 export default {
+  name: 'CarouselSlide',
   props: {
-      index: {
-          type: Number, default: 0
-      }
+    index: {
+      type: Number, default: 0
+    }
   },
   computed: {
     visible () {

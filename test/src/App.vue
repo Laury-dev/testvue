@@ -3,45 +3,34 @@
     <NavBarre class="nav" />
     <div class="div" key="div">
       <PartOne />
-      <!-- <carousel>
-        <carousel-slide v-for="n in slides" :key="n" :index="n-1"> -->
-          <!-- <div style="position:absolute; left:0; right:0; text-align:center; top:80%; ">
-          <p>Bonjour</p>
-          </div>-->
-          <!-- <img src="./assets/logo2.png" alt />
-        </carousel-slide>
-      </carousel> -->
     </div>
-    <div id="div1" key="div1"></div>
+    <div id="div1" key="div1">
+      <CarouselVue></CarouselVue>
+    </div>
     <div id="div2" key="div2">
       <Cards />
     </div>
     <div id="div3" key="div3"></div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import PartOne from "./components/PartOne";
-import NavBarre from "./components/NavBarre";
-import Cards from "./components/Cards";
-import Carousel from "./components/Carousel";
-import CarouselSide from "./components/CarouselSlide";
-
+import PartOne from './components/PartOne'
+import NavBarre from './components/NavBarre'
+import Cards from './components/Cards'
+import CarouselVue from './components/carouselVue'
+import Footer from './components/Footer'
 export default {
-  name: "App",
+  name: 'App',
   components: {
     PartOne,
     NavBarre,
     Cards,
-    Carousel,
-    CarouselSide
-  },
-  data() {
-    return {
-      slides: 3,  
-    }
+    CarouselVue,
+    Footer
   }
-};
+}
 </script>
 
 <style>
@@ -77,7 +66,7 @@ html {
 #div3 {
   padding-top: 5em;
   width: 100%;
-  height: 52em;
+  height: 45em;
   background-color: aquamarine;
 }
 .nav {

@@ -1,12 +1,12 @@
 <template>
   <nav class="navDiv">
     <h2>Title Nav</h2>
-    <ul class="navUl">
-      <li class="navLi" v-for="(link, index) in links" :key="index">
-        <a v-if="link.active" class="navAActive" v-bind:href="link.href">{{link.name}}</a>
-        <a v-else class="navA" v-bind:href="link.href" @click="changeActive(link)">{{link.name}}</a>
-      </li>
-    </ul>
+      <ul class="navUl">
+        <li class="navLi" v-for="(link, index) in links" :key="index">
+          <a v-if="link.active" class="navAActive" v-bind:href="link.href">{{link.name}}</a>
+          <a v-else class="navA" v-bind:href="link.href" @click="changeActive(link)">{{link.name}}</a>
+        </li>
+      </ul>
   </nav>
 </template>
 
@@ -34,20 +34,20 @@ const links = [
   }
 ];
 export default {
-  data() {
+  data () {
     return {
       links: links
-    };
+    }
   },
   methods: {
-    changeActive: (link) => {
-        links.forEach((l) => {
-        l.active = false;
-    })
-      link.active = true;
+    changeActive: link => {
+      links.forEach(l => {
+        l.active = false
+      })
+      link.active = true
     }
   }
-};
+}
 </script>
 
 <style>
@@ -76,11 +76,5 @@ export default {
   padding: 1.5em 2em;
   background-color: #2c3e50;
   color: #fff;
-}
-
-@media (max-width: 750px){
-   .navDiv{
-       background-color: crimson;
-   } 
 }
 </style>
