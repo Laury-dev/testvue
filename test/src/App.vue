@@ -2,11 +2,16 @@
   <div id="app">
     <NavBarre class="nav" />
     <div class="div" key="div">
-      <PartOne />
+      <Carousel>
+        <CarouselSide>coucou
+          <img src="./assets/logo.png" alt="">
+        </CarouselSide>
+        <CarouselSide>salut
+                  <img src="./assets/logo.png" alt="">
+        </CarouselSide>
+      </Carousel>
     </div>
-    <div id="div1" key="div1">
-      <CarouselVue></CarouselVue>
-    </div>
+    <div id="div1" key="div1"></div>
     <div id="div2" key="div2">
       <Cards />
     </div>
@@ -16,19 +21,22 @@
 </template>
 
 <script>
-import PartOne from './components/PartOne'
-import NavBarre from './components/NavBarre'
-import Cards from './components/Cards'
-import CarouselVue from './components/carouselVue'
-import Footer from './components/Footer'
+// import PartOne from "./components/PartOne"
+import NavBarre from "./components/NavBarre"
+import Cards from "./components/Cards"
+import Carousel from "./components/carousel/Carousel"
+import CarouselSide from "./components/carousel/CarouselSlide"
+import Footer from "./components/Footer"
+
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    PartOne,
+    // PartOne,
     NavBarre,
     Cards,
-    CarouselVue,
-    Footer
+    Footer,
+    Carousel,
+    CarouselSide
   }
 }
 </script>

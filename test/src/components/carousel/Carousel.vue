@@ -1,63 +1,43 @@
 <template>
-  <div>
-    <h2>Carousel</h2>
-    <div class="carousel">
+  <div class="carousel">
     <slot></slot>
-    <button class="carousel__nav carousel__prev" @click.prevent="prev"></button>
-    <button class="carousel__nav carousel__next" @click.prevent="next"></button>
-    <div class="pagination">
-    <button v-for="n in slidesCount" @click="goto(n-1)" :key="n" :class="{active: n-1 === index}"></button>
-    </div>
-  </div>
+    <button class="carouselNav carouselPrev" v-on:click.prevent="prev"></button>
+    <button class="carouselNav carouselNext" v-on:click.prevent="next">next</button>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       index: 0,
-      slides: [],
-      direction: null
+      slides: this.$children
     }
   },
-  mounted () {
+  mounted() {
     this.slides = this.$children
     this.slides.forEach((slide, i) => {
       slide.index = i
     })
   },
-  watch: {
-    slides (slides) {
-      if (this.index >= this.slidesCount) {
-        this.index = this.slidesCount - 1
-      }
-    }
-  },
-  computed: {
-    slidesCount () {
-      return this.slides.length
-    }
-  },
   methods: {
     next () {
       this.index++
-      this.direction = 'right'
       if (this.index >= this.slidesCount) {
         this.index = 0
       }
     },
     prev () {
       this.index--
-      this.direction = 'left'
       if (this.index < 0) {
-        this.index = this.slidesCount - 1
+        this.index = this.slidesCount-1
       }
-    },
-    goto (index) {
-      this.direction = index > this.index ? 'right' : 'left'
-      this.index = index
     }
+  },
+  computed: {
+   slidesCount () {
+     return this.slides.length
+   }
   }
 }
 </script>
@@ -65,19 +45,19 @@ export default {
 .carousel{
   position: relative;
 }
-.carousel__nav{
+.carouselNav{
   position: absolute;
   top: 50%;
   left: 1em;
-  background: url("../../assets/fleche.png");
-  width: 50px;
-  height: 50px;
+  background: url("../../assets/prev.png");
+  width: 60px;
+  height: 60px;
   border: none;
 }
-.carousel__nav.carousel__next{
-  right: 1em;
+.carouselNav .carouselNext{
+  right: 5em;
   left: auto;
-  background:  url("../../assets/fleche.png");
+  background:  url("../../assets/next.png");
 }
 .pagination{
   position: absolute;

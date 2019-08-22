@@ -1,25 +1,21 @@
 <template>
-  <transition :name="transition">
-    <div v-show="visible">
-      <slot></slot>
-    </div>
-  </transition>
+  <div v-show="visible">
+    index : {{index}}
+    <slot></slot>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'CarouselSlide',
-  props: {
-    index: {
-      type: Number, default: 0
+  name: "CarouselSlide",
+  data() {
+    return {
+      index: 0
     }
   },
   computed: {
     visible () {
       return this.index === this.$parent.index
-    },
-    transition () {
-      return 'slide-' + this.$parent.direction
     }
   }
 }
