@@ -4,7 +4,7 @@
     <div class="div" key="div">
       <Carousel>
         <CarouselSide>
-          <img src="./assets/logo.png" alt="">
+          <img src="./assets/logo.png" alt="" class="imgSlide">
         </CarouselSide>
         <CarouselSide>
           <img src="./assets/logo.png" alt="">
@@ -82,5 +82,8 @@ html {
   position: fixed;
   top: 0;
   width: 60%;
+}
+.imgSlide{
+  width: 70%;
 }
 </style>

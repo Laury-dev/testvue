@@ -1,12 +1,13 @@
 <template>
   <nav class="navDiv">
     <h2>Title Nav</h2>
-      <ul class="navUl">
+      <ul class="navUl" v-show="display">
         <li class="navLi" v-for="(link, index) in links" :key="index">
           <a v-if="link.active" class="navAActive" v-bind:href="link.href">{{link.name}}</a>
           <a v-else class="navA" v-bind:href="link.href" @click="changeActive(link)">{{link.name}}</a>
         </li>
       </ul>
+      <button class="btnHeader" v-on:click="changeHeader">btn</button>
   </nav>
 </template>
 
@@ -36,7 +37,8 @@ const links = [
 export default {
   data () {
     return {
-      links: links
+      links: links,
+      display: false
     }
   },
   methods: {
@@ -45,6 +47,10 @@ export default {
         l.active = false
       })
       link.active = true
+    },
+    changeHeader: () => {
+      this.display = !this.display
+      console.log(this.display)
     }
   }
 }
@@ -76,5 +82,13 @@ export default {
   padding: 1.5em 2em;
   background-color: #2c3e50;
   color: #fff;
+}
+.btnHeader{
+  display: none;
+}
+@media screen and (max-width: 780px) {
+  .btnHeader{
+    display: block;
+  }
 }
 </style>

@@ -65,6 +65,8 @@ export default {
 }
 .cardUl {
   display: flex;
+  width: 50%;
+  padding: 0 15%;
 }
 .cardLi{
   list-style: none;
@@ -99,5 +101,16 @@ export default {
 .flip-leave {
   transform: rotateY(180deg);
   opacity: 0;
+}
+
+@media screen and (max-width: 780px) {
+  .cardUl {
+    flex-direction: column;
+  }
+  .card {
+    width: 250px;
+    height: 100px;
+    padding: 50px 50px;
+  }
 }
 </style>

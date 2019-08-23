@@ -34,17 +34,21 @@ export default {
   background-color: #2c3e50;
   color: #fff;
   text-align: center;
+  width: 100%;
 }
 .footerPartOne {
   align-items: center;
   display: flex;
+  width: 100%;
 }
 .footerH2 {
-  padding-left: 35%;
+  padding-left: 12em;
 }
 .footerUl {
   display: flex;
-  padding-left: 12%;
+  position: absolute;
+  bottom: -187.6em;
+  right: 12em;
 }
 .footerLi {
   list-style: none;
@@ -57,5 +61,23 @@ export default {
 .footerEnd {
   padding: 0;
   margin: 0;
+}
+@media screen and (max-width: 1100px){
+  .footerH2 {
+    padding-left: 5%;
+  }
+  .footerUl {
+    bottom: -189em;
+    right: 5%;
+  }
+}
+@media screen and (max-width: 780px){
+  .footerH2 {
+    padding-left: 5%;
+  }
+  .footerUl {
+    bottom: -189em;
+    right: 1em;
+  }
 }
 </style>
