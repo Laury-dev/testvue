@@ -3,11 +3,11 @@
     <NavBarre class="nav" />
     <div class="div" key="div">
       <Carousel>
-        <CarouselSide>coucou
+        <CarouselSide>
           <img src="./assets/logo.png" alt="">
         </CarouselSide>
-        <CarouselSide>salut
-                  <img src="./assets/logo.png" alt="">
+        <CarouselSide>
+          <img src="./assets/logo.png" alt="">
         </CarouselSide>
       </Carousel>
     </div>
@@ -22,14 +22,14 @@
 
 <script>
 // import PartOne from "./components/PartOne"
-import NavBarre from "./components/NavBarre"
-import Cards from "./components/Cards"
-import Carousel from "./components/carousel/Carousel"
-import CarouselSide from "./components/carousel/CarouselSlide"
-import Footer from "./components/Footer"
+import NavBarre from './components/NavBarre'
+import Cards from './components/Cards'
+import Carousel from './components/carousel/Carousel'
+import CarouselSide from './components/carousel/CarouselSlide'
+import Footer from './components/Footer'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     // PartOne,
     NavBarre,
@@ -58,6 +58,7 @@ html {
   padding-top: 5em;
   width: 100%;
   height: 59em;
+  text-align: center;
 }
 #div1 {
   padding-top: 5em;

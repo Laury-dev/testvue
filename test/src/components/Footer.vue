@@ -21,12 +21,12 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       links: ["Home", "Contact", "Autre"]
-    };
+    }
   }
-};
+}
 </script>
 
 <style>

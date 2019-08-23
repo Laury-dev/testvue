@@ -32,7 +32,7 @@ const links = [
     href: "#div3",
     active: false
   }
-];
+]
 export default {
   data () {
     return {

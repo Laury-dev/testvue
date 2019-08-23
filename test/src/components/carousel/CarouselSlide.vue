@@ -1,8 +1,9 @@
 <template>
-  <div v-show="visible">
-    index : {{index}}
-    <slot></slot>
-  </div>
+  <transition name="slide">
+    <div class="slideDiv" v-show="visible">
+      <slot></slot>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -14,7 +15,7 @@ export default {
     }
   },
   computed: {
-    visible () {
+    visible() {
       return this.index === this.$parent.index
     }
   }
@@ -22,10 +23,13 @@ export default {
 </script>
 
 <style>
-.slide-right-enter-active {
+.slideDiv{
+  padding-top: 15em;
+}
+.slide-enter-active {
   animation: slideRightIn 1s;
 }
-.slide-right-leave-active {
+.slide-leave-active {
   animation: slideRightOut 1s;
   position: absolute;
   left: 0;
