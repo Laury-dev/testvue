@@ -57,6 +57,7 @@ export default {
 </script>
 
 <style>
+/* Probleme de centrage des cards sur le grand format*/
 .cardDiv {
   text-align: center;
 }
@@ -64,9 +65,11 @@ export default {
   padding-bottom: 2em;
 }
 .cardUl {
+  /* Probleme */
   display: flex;
-  width: 50%;
-  padding: 0 15%;
+  width: 90%;
+  margin: auto 15%;
+  padding: 0;
 }
 .cardLi{
   list-style: none;
@@ -78,7 +81,7 @@ export default {
   padding: 80px 50px;
   background-color: #fff;
   border-radius: 7px;
-  margin: 1em;
+  margin: auto 2em auto 2em;
   text-align: center;
   line-height: 27px;
   cursor: pointer;
@@ -103,14 +106,31 @@ export default {
   opacity: 0;
 }
 
+@media screen and (max-width: 1100px) {
+  .cardDiv {
+    margin: 0; 
+  }
+  .cardUl {
+    padding: 0;
+    margin: 0 10%;
+    width: 80%;
+  }
+  .card {
+    margin: auto 2em auto 1.5em;
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .cardUl {
     flex-direction: column;
+    width: 91%;
   }
   .card {
     width: 250px;
     height: 100px;
     padding: 50px 50px;
+    margin: auto auto 1em auto;
   }
 }
 </style>

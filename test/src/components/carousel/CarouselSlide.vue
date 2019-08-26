@@ -23,6 +23,7 @@ export default {
 </script>
 
 <style>
+/* Attention probleme d'orientation transition a réglé */
 .slideDiv{
   padding-top: 15em;
 }

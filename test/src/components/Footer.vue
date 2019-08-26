@@ -30,6 +30,7 @@ export default {
 </script>
 
 <style>
+/* Attention defaut de responsivité pour le titre */
 .footer {
   background-color: #2c3e50;
   color: #fff;

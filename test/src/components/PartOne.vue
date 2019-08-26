@@ -2,6 +2,7 @@
 <div>
     <h1>Test</h1>
 </div>
+<!-- A realiser pour la partie deux -->
 </template>
 
 <script>
