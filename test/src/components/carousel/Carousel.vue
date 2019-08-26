@@ -42,6 +42,7 @@ export default {
 }
 </script>
 <style>
+/* Attention img prev a changer forma png  */
 .carousel {
   position: relative;
   width: 100%;

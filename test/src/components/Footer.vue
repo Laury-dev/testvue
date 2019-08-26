@@ -48,7 +48,7 @@ export default {
 .footerUl {
   display: flex;
   position: absolute;
-  bottom: -187.6em;
+  bottom: -201.8em;
   right: 12em;
 }
 .footerLi {
@@ -68,7 +68,7 @@ export default {
     padding-left: 5%;
   }
   .footerUl {
-    bottom: -189em;
+    bottom: -201.5em;
     right: 5%;
   }
 }
@@ -77,7 +77,7 @@ export default {
     padding-left: 5%;
   }
   .footerUl {
-    bottom: -189em;
+    bottom: -201.5em;
     right: 1em;
   }
 }

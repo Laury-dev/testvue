@@ -4,14 +4,16 @@
     <div class="div" key="div">
       <Carousel>
         <CarouselSide>
-          <img src="./assets/logo.png" alt="" class="imgSlide">
+          <!-- <img src="./assets/logo.png" alt="" class="imgSlide"> -->
         </CarouselSide>
         <CarouselSide>
-          <img src="./assets/logo.png" alt="">
+          <!-- <img src="./assets/logo.png" alt=""> -->
         </CarouselSide>
       </Carousel>
     </div>
-    <div id="div1" key="div1"></div>
+    <div id="div1" key="div1">
+      <PartTwo />
+    </div>
     <div id="div2" key="div2">
       <Cards />
     </div>
@@ -21,7 +23,7 @@
 </template>
 
 <script>
-// import PartOne from "./components/PartOne"
+import PartTwo from "./components/PartTwo"
 import NavBarre from './components/NavBarre'
 import Cards from './components/Cards'
 import Carousel from './components/carousel/Carousel'
@@ -31,7 +33,7 @@ import Footer from './components/Footer'
 export default {
   name: 'App',
   components: {
-    // PartOne,
+    PartTwo,
     NavBarre,
     Cards,
     Footer,
@@ -64,7 +66,7 @@ html {
   padding-top: 5em;
   width: 100%;
   height: 60em;
-  background-color: lightcoral;
+  background-color: lightseagreen;
 }
 #div2 {
   padding-top: 5em;
