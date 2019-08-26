@@ -4,7 +4,7 @@
       <h2 class="footerH2">Titre du footer</h2>
       <ul class="footerUl">
         <li v-for="(link, index) in links" :key="index" class="footerLi">
-          <a href="#" class="footerA">{{ link }}</a>
+          <a href="link.lien" class="footerA">{{ link.Name }}</a>
         </li>
       </ul>
     </div>
@@ -23,14 +23,27 @@
 export default {
   data () {
     return {
-      links: ["Home", "Contact", "Autre"]
+      links: [
+        {
+          Name: "Home",
+          lien: '#div'
+        },
+        {
+          Name: "Contact",
+          lien: '#'
+        },
+        {
+          Name: "Autre",
+          lien: '#'
+        }]
     }
   }
 }
 </script>
 
 <style>
-/* Attention defaut de responsivité pour le titre */
+/*Attention defaut de responsivité pour le titre 
+(passe sur deux lignes)*/
 .footer {
   background-color: #2c3e50;
   color: #fff;
@@ -48,7 +61,7 @@ export default {
 .footerUl {
   display: flex;
   position: absolute;
-  bottom: -201.8em;
+  bottom: -189.8em;
   right: 12em;
 }
 .footerLi {
@@ -68,7 +81,7 @@ export default {
     padding-left: 5%;
   }
   .footerUl {
-    bottom: -201.5em;
+    bottom: -187.8em;
     right: 5%;
   }
 }
@@ -77,7 +90,7 @@ export default {
     padding-left: 5%;
   }
   .footerUl {
-    bottom: -201.5em;
+    bottom: -188.8em;
     right: 1em;
   }
 }

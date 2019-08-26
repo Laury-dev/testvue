@@ -25,11 +25,11 @@
         <strong>En lire plus</strong>
       </button>
     </div>
-    <div>
+    <div class="partTwodivImg">
       <!-- Attention probleme avaec la lecture des images -->
       <ul class="partTwoUl">
         <li v-for="(image, index) in tabRefImages" :key="index" class="partTwoLi">
-          <img :src='"../assets/"+image' alt="image">
+          <img :src='"/assets/"+image' alt="image">
         </li>
       </ul>
     </div>
@@ -81,5 +81,8 @@ export default {
   display: block;
   height: 100%;
   width: 30%;
+}
+.partTwodivImg{
+  margin-top: 4em;
 }
 </style>
