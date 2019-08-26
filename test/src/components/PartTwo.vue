@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="partTwoDiv">
     <div>
-      <h1>Titre Part 2</h1>
+      <h2 class="partTwoH2">Titre Part 2</h2>
       <p class="paragPresent">
         Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem
         Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior
@@ -26,14 +26,14 @@
       </button>
     </div>
     <div>
-      <ul>
-        <li v-for="(image , index) in tabRefImages" :key="index">
-          <img v-bind:src='"../assets/"+image' alt="" class="imgIllus">
+      <!-- Attention probleme avaec la lecture des images -->
+      <ul class="partTwoUl">
+        <li v-for="(image, index) in tabRefImages" :key="index" class="partTwoLi">
+          <img :src='"../assets/"+image' alt="image">
         </li>
       </ul>
     </div>
   </div>
-  <!-- A realiser pour la partie deux -->
 </template>
 
 <script>
@@ -41,26 +41,24 @@ export default {
   name: "PartOne",
   data () {
     return {
-      tabRefImages: ['next.png','prev.png'],
+      tabRefImages: ['next.png', 'prev.png', 'logo.png'],
       viewText: false
     }
   },
   methods: {
-    view() {
-      this.viewText = !this.viewText;
+    view () {
+      this.viewText = !this.viewText
     }
   }
-};
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-div {
+<style>
+.partTwoDiv {
   text-align: center;
   color: #fff;
 }
-h1,
-h2 {
+.partTwoH2 {
   font-weight: normal;
   text-decoration: underline;
 }
@@ -74,8 +72,14 @@ h2 {
   background-color: #fff;
   color: #2c3e50;
 }
-.imgIllus{
-  width: 60px;
-  height: 60px;
+.partTwoUl{
+  display: flex;
+  height: 160px;
+}
+.partTwoLi{
+  list-style: none;
+  display: block;
+  height: 100%;
+  width: 30%;
 }
 </style>
